@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import joblib
+import pickle
 import streamlit as st
 
 
@@ -9,7 +9,7 @@ st.title("DiabetesPrediction Application")
 st.header("Machine Learning")
 
 
-model = joblib.load("Logisticmodel.sav")
+model = pickle.load("DiabetesPrediction.pkl")
 
 
 # Pregnancies	
@@ -26,11 +26,11 @@ Age = st.number_input("Age ", min_value=18 , max_value= 85)
 
 
 
-if st.success("predict"):
+if st.button("predict"):
     new_array = np.array([[Pregnancies,Glucose	,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]])
     prediction = model.predict(new_array)
 
     if prediction == 0:
-        st.write ("Negative")
+        st.write("Negative")
     else:
         st.write("Positive")    
