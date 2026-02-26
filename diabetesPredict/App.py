@@ -32,6 +32,6 @@ if st.button("predict"):
     prediction = model.predict(new_array)
 
     if prediction == 0:
-        st.write("Negative")
+        st.success("Negative")
     else:
-        st.write("Positive")    
+        st.success("Positive")    
