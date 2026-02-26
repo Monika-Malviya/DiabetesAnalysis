@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import joblib as jb
+import joblib 
 import streamlit as st
 
 
@@ -8,7 +8,7 @@ import streamlit as st
 st.title("DiabetesPrediction Application")
 st.header("Machine Learning")
 
-model = jb.load("DiabetesPrediction.pkl")
+model = joblib.load("DiabetesPrediction.pkl")
 # model = pickle.load("DiabetesPrediction.pkl")
 # with open("DiabetesPrediction.pkl", "rb") as file:
 #     model = pickle.load(file)
