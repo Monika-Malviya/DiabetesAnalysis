@@ -9,8 +9,8 @@ st.title("DiabetesPrediction Application")
 st.header("Machine Learning")
 
 
-model = pickle.load("DiabetesPrediction.pkl")
-
+# model = pickle.load("DiabetesPrediction.pkl")
+pickle.load("DiabetesPrediction.pkl")
 
 # Pregnancies	
 # Glucose	BloodPressure	SkinThickness	Insulin	BMI	DiabetesPedigreeFunction	Age
