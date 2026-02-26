@@ -10,7 +10,8 @@ st.header("Machine Learning")
 
 
 # model = pickle.load("DiabetesPrediction.pkl")
-pickle.load("DiabetesPrediction.pkl")
+with open("DiabetesPrediction.pkl", "rb") as file:
+    model = pickle.load(file)
 
 # Pregnancies	
 # Glucose	BloodPressure	SkinThickness	Insulin	BMI	DiabetesPedigreeFunction	Age
